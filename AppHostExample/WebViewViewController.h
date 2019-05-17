@@ -6,11 +6,14 @@
 //  Copyright © 2019 liang. All rights reserved.
 //
 
-#import <AppHost/AppHost.h>
+#import <BMBridgeDebug/BMBridgeDebugHeader.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WebViewViewController : AppHostViewController
+@interface WebViewViewController : UIViewController
+@property (nonatomic, copy) NSString* url;
 
 @end
 

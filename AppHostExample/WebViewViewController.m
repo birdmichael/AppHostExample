@@ -7,47 +7,39 @@
 //
 
 #import "WebViewViewController.h"
-#import <AppHost/AppHost.h>
+#import <BMBridgeDebug/BMBridgeDebug.h>
 
-@interface WebViewViewController ()
-
+@interface WebViewViewController () <WKUIDelegate, WKNavigationDelegate,BMBridgeDebugCenterProtocol>
+@property (nonatomic, strong) WKWebView* webView;
 @end
 
 @implementation WebViewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initWebview];
     // Do any additional setup after loading the view.
 }
 
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
-{
-    NSURLRequest *request = navigationAction.request;
-    //此url解析规则自己定义
-    NSString *rurl = [[request URL] absoluteString];
-    NSString *kProtocol = @"openapp.jdmobile://virtual?params=";
-    if ([rurl hasPrefix:kProtocol]) {
-        NSString *param = [rurl stringByReplacingOccurrencesOfString:kProtocol withString:@""];
-        
-        NSDictionary *contentJSON = nil;
-        NSError *contentParseError;
-        if (param) {
-            param = [self stringDecodeURIComponent:param];
-            contentJSON = [NSJSONSerialization JSONObjectWithData:[param dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&contentParseError];
-        }
-        
-        [self callNative:@"toast" parameter:@{
-                                              @"text":[contentJSON description]
-                                              }];
-        decisionHandler(WKNavigationActionPolicyCancel);
-    } else {
-        [super webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
-    }
-}
+-(void)initWebview{
+    WKWebViewConfiguration *wkConfig = [[WKWebViewConfiguration alloc] init];
+    _webView = [[WKWebView alloc]initWithFrame:CGRectZero configuration:wkConfig];
+    //使用单例 解决locastorge 储存问题
+    
+    [self.view insertSubview:_webView atIndex:0];
+    _webView.frame = CGRectMake(0, 0, BD_SCREEN_WIDTH, BD_SCREEN_HEIGHT);
+    _webView.UIDelegate = self;
+    _webView.scrollView.bounces = NO;
+    _webView.navigationDelegate = self;
+    [_webView loadRequest:[NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+    
+    self.bridgeCenter = [BMBridgeCenter new];
+    self.bridgeCenter.vc = self;
+    self.bridgeCenter.webView = _webView;
+    [self.bridgeCenter injectScriptsToUserContent:_webView.configuration.userContentController];
 
-- (NSString *)stringDecodeURIComponent:(NSString *)encoded{
-    NSString *decoded = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (CFStringRef)encoded, CFSTR(""), kCFStringEncodingUTF8);
-    //    NSLog(@"decodedString %@", decoded);
-    return decoded;
+
 }
+@synthesize bridgeCenter;
+
 @end

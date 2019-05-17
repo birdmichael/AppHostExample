@@ -1,0 +1,3 @@
+[submodule "BMBridgeDebug"]
+	path = BMBridgeDebug
+	url = git@github.com:birdmichael/BMBridgeDebug.git

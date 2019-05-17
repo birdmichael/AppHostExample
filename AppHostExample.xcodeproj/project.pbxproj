@@ -7,44 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A044E2228E62DC0099FD86 /* BMBridgeDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A044E1228E62AD0099FD86 /* BMBridgeDebug.framework */; };
+		01A044E3228E62DC0099FD86 /* BMBridgeDebug.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01A044E1228E62AD0099FD86 /* BMBridgeDebug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		481A06AD2265710700DD57BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06AC2265710700DD57BB /* AppDelegate.m */; };
 		481A06B02265710700DD57BB /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06AF2265710700DD57BB /* MasterViewController.m */; };
 		481A06B62265710700DD57BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481A06B42265710700DD57BB /* Main.storyboard */; };
 		481A06B82265710800DD57BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481A06B72265710800DD57BB /* Assets.xcassets */; };
 		481A06BB2265710800DD57BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481A06B92265710800DD57BB /* LaunchScreen.storyboard */; };
 		481A06BE2265710800DD57BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06BD2265710800DD57BB /* main.m */; };
-		481A06CB22657CCD00DD57BB /* HUDResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06CA22657CCD00DD57BB /* HUDResponse.m */; };
 		481A06D022657D4600DD57BB /* TestCase in Resources */ = {isa = PBXBuildFile; fileRef = 481A06CF22657D4600DD57BB /* TestCase */; };
 		481A06D32265800E00DD57BB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06D22265800E00DD57BB /* UIView+Toast.m */; };
 		481A06D7226587C700DD57BB /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06D6226587C700DD57BB /* WebViewViewController.m */; };
 		481A06DF2265B72100DD57BB /* mymt.html in Resources */ = {isa = PBXBuildFile; fileRef = 481A06DE2265B72100DD57BB /* mymt.html */; };
 		481A06E62265C58000DD57BB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06E52265C58000DD57BB /* BaseViewController.m */; };
-		48B39A32226D6988004D5872 /* AppHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; };
-		48B39A33226D6988004D5872 /* AppHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48B39A6C226EE7AD004D5872 /* AppHostExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B39A6B226EE7AD004D5872 /* AppHostExampleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		485614962267564700E9BB89 /* PBXContainerItemProxy */ = {
+		01A044E0228E62AD0099FD86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 485614912267564600E9BB89 /* AppHost.xcodeproj */;
+			containerPortal = 01A044DB228E62AD0099FD86 /* BMBridgeDebug.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 48D888AA21D4CF08006E4279;
-			remoteInfo = AppHost;
+			remoteGlobalIDString = 01E09326228ABBDB002AE3E6;
+			remoteInfo = BMBridgeDebug;
 		};
-		48B39A30226D6971004D5872 /* PBXContainerItemProxy */ = {
+		01A044E4228E62DC0099FD86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 485614912267564600E9BB89 /* AppHost.xcodeproj */;
+			containerPortal = 01A044DB228E62AD0099FD86 /* BMBridgeDebug.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 48D888A921D4CF08006E4279;
-			remoteInfo = AppHost;
-		};
-		48B39A34226D6988004D5872 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 485614912267564600E9BB89 /* AppHost.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 48D888A921D4CF08006E4279;
-			remoteInfo = AppHost;
+			remoteGlobalIDString = 01E09325228ABBDB002AE3E6;
+			remoteInfo = BMBridgeDebug;
 		};
 		48B39A6E226EE7AD004D5872 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -62,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				48B39A33226D6988004D5872 /* AppHost.framework in Embed Frameworks */,
+				01A044E3228E62DC0099FD86 /* BMBridgeDebug.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01A044DB228E62AD0099FD86 /* BMBridgeDebug.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BMBridgeDebug.xcodeproj; path = BMBridgeDebug/BMBridgeDebug.xcodeproj; sourceTree = "<group>"; };
 		481A06A82265710700DD57BB /* AppHostExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppHostExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481A06AB2265710700DD57BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		481A06AC2265710700DD57BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,8 +73,6 @@
 		481A06BA2265710800DD57BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		481A06BC2265710800DD57BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481A06BD2265710800DD57BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		481A06C922657CCD00DD57BB /* HUDResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDResponse.h; sourceTree = "<group>"; };
-		481A06CA22657CCD00DD57BB /* HUDResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDResponse.m; sourceTree = "<group>"; };
 		481A06CF22657D4600DD57BB /* TestCase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TestCase; path = resources/TestCase; sourceTree = "<group>"; };
 		481A06D12265800E00DD57BB /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		481A06D22265800E00DD57BB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
@@ -90,7 +81,6 @@
 		481A06DE2265B72100DD57BB /* mymt.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = mymt.html; path = resources/mymt.html; sourceTree = "<group>"; };
 		481A06E42265C58000DD57BB /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		481A06E52265C58000DD57BB /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		485614912267564600E9BB89 /* AppHost.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppHost.xcodeproj; path = ../AppHost/AppHost.xcodeproj; sourceTree = "<group>"; };
 		48B39A69226EE7AD004D5872 /* AppHostExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppHostExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B39A6B226EE7AD004D5872 /* AppHostExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHostExampleUITests.swift; sourceTree = "<group>"; };
 		48B39A6D226EE7AD004D5872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B39A32226D6988004D5872 /* AppHost.framework in Frameworks */,
+				01A044E2228E62DC0099FD86 /* BMBridgeDebug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,10 +105,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A044DC228E62AD0099FD86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01A044E1228E62AD0099FD86 /* BMBridgeDebug.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		481A069F2265710700DD57BB = {
 			isa = PBXGroup;
 			children = (
-				485614912267564600E9BB89 /* AppHost.xcodeproj */,
+				01A044DB228E62AD0099FD86 /* BMBridgeDebug.xcodeproj */,
 				481A06AA2265710700DD57BB /* AppHostExample */,
 				48B39A6A226EE7AD004D5872 /* AppHostExampleUITests */,
 				481A06A92265710700DD57BB /* Products */,
@@ -146,8 +144,6 @@
 				481A06E52265C58000DD57BB /* BaseViewController.m */,
 				481A06D5226587C700DD57BB /* WebViewViewController.h */,
 				481A06D6226587C700DD57BB /* WebViewViewController.m */,
-				481A06C922657CCD00DD57BB /* HUDResponse.h */,
-				481A06CA22657CCD00DD57BB /* HUDResponse.m */,
 				481A06B42265710700DD57BB /* Main.storyboard */,
 				481A06B72265710800DD57BB /* Assets.xcassets */,
 				481A06B92265710800DD57BB /* LaunchScreen.storyboard */,
@@ -184,14 +180,6 @@
 			name = Toast;
 			sourceTree = "<group>";
 		};
-		485614922267564600E9BB89 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				485614972267564700E9BB89 /* AppHost.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		48B39A6A226EE7AD004D5872 /* AppHostExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,8 +204,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				48B39A31226D6971004D5872 /* PBXTargetDependency */,
-				48B39A35226D6988004D5872 /* PBXTargetDependency */,
+				01A044E5228E62DC0099FD86 /* PBXTargetDependency */,
 			);
 			name = AppHostExample;
 			productName = AppHostExample;
@@ -274,8 +261,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 485614922267564600E9BB89 /* Products */;
-					ProjectRef = 485614912267564600E9BB89 /* AppHost.xcodeproj */;
+					ProductGroup = 01A044DC228E62AD0099FD86 /* Products */;
+					ProjectRef = 01A044DB228E62AD0099FD86 /* BMBridgeDebug.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -287,11 +274,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		485614972267564700E9BB89 /* AppHost.framework */ = {
+		01A044E1228E62AD0099FD86 /* BMBridgeDebug.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = AppHost.framework;
-			remoteRef = 485614962267564700E9BB89 /* PBXContainerItemProxy */;
+			path = BMBridgeDebug.framework;
+			remoteRef = 01A044E0228E62AD0099FD86 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -329,7 +316,6 @@
 				481A06AD2265710700DD57BB /* AppDelegate.m in Sources */,
 				481A06BE2265710800DD57BB /* main.m in Sources */,
 				481A06E62265C58000DD57BB /* BaseViewController.m in Sources */,
-				481A06CB22657CCD00DD57BB /* HUDResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,15 +330,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		48B39A31226D6971004D5872 /* PBXTargetDependency */ = {
+		01A044E5228E62DC0099FD86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = AppHost;
-			targetProxy = 48B39A30226D6971004D5872 /* PBXContainerItemProxy */;
-		};
-		48B39A35226D6988004D5872 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AppHost;
-			targetProxy = 48B39A34226D6988004D5872 /* PBXContainerItemProxy */;
+			name = BMBridgeDebug;
+			targetProxy = 01A044E4228E62DC0099FD86 /* PBXContainerItemProxy */;
 		};
 		48B39A6F226EE7AD004D5872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -498,7 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5F3P75AV37;
+				DEVELOPMENT_TEAM = 7GZF8W7RUY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppHostExample",
@@ -519,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5F3P75AV37;
+				DEVELOPMENT_TEAM = 7GZF8W7RUY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppHostExample",

@@ -8,8 +8,7 @@
 
 #import "MasterViewController.h"
 #import "WebViewViewController.h"
-#import <AppHost/AppHost.h>
-#import "HUDResponse.h"
+#import <BMBridgeDebug/BMBridgeDebug.h>
 
 @interface MasterViewController ()
 
@@ -21,13 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    kWebViewProgressTintColorRGB = 0xdcb000;
-    kFakeCookieWebPageURLWithQueryString = @"https://you.163.com?26u-KQa-fKQ-3BD";
-    kGCDWebServer_logging_enabled = YES;
-    [[AHDebugServerManager sharedInstance] showDebugWindow];
-    [[AHDebugServerManager sharedInstance] start];
+//    kWebViewProgressTintColorRGB = 0xdcb000;
+//    kFakeCookieWebPageURLWithQueryString = @"https://you.163.com?26u-KQa-fKQ-3BD";
+//    kGCDWebServer_logging_enabled = YES;
+    [[BMDebugServerManager sharedInstance] showDebugWindow];
+    [[BMDebugServerManager sharedInstance] start];
     // 添加新的 Response，提供新的接口能力
-    [[AHResponseManager defaultManager] addCustomResponse:HUDResponse.class];
     
     // Do any additional setup after loading the view.
     // https://h5.m.jd.com/babelDiy/Zeus/2eWUit9hhREhCRJqkBCB1VXCTvw9/index.html?channel=5&lng=120.186718&lat=30.189141&un_area=15_1213_1215_50115&sid=67b5c76977573adac5a0b17718113f7w#/
@@ -83,21 +81,7 @@
     WebViewViewController *vc = [[WebViewViewController alloc] init];
     NSDictionary *object = self.objects[indexPath.row];
     NSString *url = [object objectForKey:@"url"];
-    NSString *fileName = [object objectForKey:@"fileName"];
-    if (url) {
-        vc.url = url;
-    } else if(fileName.length > 0){
-        NSString *dir = [object objectForKey:@"dir"];
-        NSURL * _Nonnull mainURL = [[NSBundle mainBundle] bundleURL];
-        NSString* domain = [object objectForKey:@"domain"];
-        if (dir.length > 0) {
-            NSURL *url = [mainURL URLByAppendingPathComponent:dir];
-            [vc loadIndexFile:fileName inDirectory:url domain:domain];
-        } else {
-            [vc loadLocalFile:[mainURL URLByAppendingPathComponent:fileName] domain:domain];
-        }
-    }
-
+    vc.url = url;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
